@@ -9,8 +9,8 @@ import {
 import { Exclude } from 'class-transformer';
 
 export enum Ethnicity {
-  WHITE = 'white',
-  BLACK = 'black',
+  CAUCASIAN = 'caucasian',
+  AFRO = 'afro',
   INDIGENOUS = 'indigenous',
   OTHER = 'other',
 }

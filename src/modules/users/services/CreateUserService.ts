@@ -5,8 +5,8 @@ import User from '../typeorm/entities/User';
 import UsersRepository from '../typeorm/repositories/userRepository';
 
 export enum Ethnicity {
-  WHITE = 'white',
-  BLACK = 'black',
+  CAUCASIAN = 'caucasian',
+  AFRO = 'afro',
   INDIGENOUS = 'indigenous',
   OTHER = 'other',
 }
