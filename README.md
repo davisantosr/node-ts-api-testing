@@ -33,43 +33,68 @@ yarn dev
 yarn typeorm migration:run
 ```
 
-rotas para teste:
+## rotas para teste:
+
+- Criação de usuário:
 
 ```bash
-GET /users/ => Lista Usuários
-POST /users/ => Cria novo usuário
-POST /users/session => Inicia sessão
-GET /users/:id => Busca um usuário por Id
-PUT /users/:id => Atualiza os dados do usuário
-DELETE /users/:id => Deleta usuário
+POST /users/
 
-**Exemplo de Dados Para Criação de usuário:**
-name: 'user a',
-email: 'user@email.com',
-password: '123456',
-age: 40,
-ethnicity: 'black', (afro, caucasian, indigenous, other)
+# Exemplo de Dados Para Criação de usuário:
+"name": "user a",
+"email": "user@email.com",
+"password": "123456",
+"age": 40,
+"ethnicity": 'black', (afro, caucasian, indigenous, other)
 phone: '9999999999',
 weight: 90,
 
-**Exemplo de Dados Para Iniciar Sessão:**
-email: 'user@email.com',
-password: '123456',
+```
+
+- Emissão de token de acesso:
+
+```bash
+POST /users/session
+```
+
+- Listagem de Usuários (Autenticação requerida)
+
+```bash
+GET /users/
+
+# Exemplo de Dados Para Iniciar Sessão:
+"email": "user@email.com",
+"password": "123456",
+```
+
+```bash
+GET /users/:id => Busca um usuário por Id
+PUT /users/:id => Atualiza os dados do usuário
+DELETE /users/:id => Deleta usuário
+```
 
 ===========================================
 
+- Criação de Endereço
+
+```bash
+POST /addresses/
+
+#Exemplo de Dados Para Criaçãod de Endereço:
+"address": "Avenida X",
+"number": 123,
+"complement": "Proximo ao ponto Y",
+"cep": "123456",
+"city": "Fortaleza",
+"state": "Ceara"
+
+```
+
+- Demais rotas
+
+```bash
 GET /addresses/ => Lista Endereços
-POST /addresses/ => Cria novo Endereço
 GET /addresses/:id => Busca um endereço por Id
 PUT /addresses/:id => Atualiza os dados do endereço
 DELETE /addresses/:id => Deleta endereço
-
-**Exemplo de Dados Para Criaçãod de Endereço:**
-address: 'Avenida X',
-number: 123,
-complement: 'Proximo ao ponto Y',
-cep: '123456',
-city: 'Fortaleza',
-state: 'Ceara0,',
-
 ```
