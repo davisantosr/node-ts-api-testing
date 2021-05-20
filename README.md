@@ -27,7 +27,13 @@ yarn dev
 
 - O servidor está configurado para executar na porta **3333**
 
-rotas:
+- Execute o comando seguinte rodar migrations e criar as tabelas no banco de dados:
+
+```bash
+yarn typeorm migration:run
+```
+
+rotas para teste:
 
 ```bash
 GET /users/ => Lista Usuários
@@ -37,14 +43,18 @@ GET /users/:id => Busca um usuário por Id
 PUT /users/:id => Atualiza os dados do usuário
 DELETE /users/:id => Deleta usuário
 
-**Dados:**
-name,
-email,
-password,
-age,
-ethnicity (afro, caucasian, indigenous, other),
-phone,
-weight,
+**Exemplo de Dados Para Criação de usuário:**
+name: 'user a',
+email: 'user@email.com',
+password: '123456',
+age: 40,
+ethnicity: 'black', (afro, caucasian, indigenous, other)
+phone: '9999999999',
+weight: 90,
+
+**Exemplo de Dados Para Iniciar Sessão:**
+email: 'user@email.com',
+password: '123456',
 
 ===========================================
 
@@ -54,12 +64,12 @@ GET /addresses/:id => Busca um endereço por Id
 PUT /addresses/:id => Atualiza os dados do endereço
 DELETE /addresses/:id => Deleta endereço
 
-**Dados:**
-address,
-number,
-complement,
-cep,
-city,
-state,
+**Exemplo de Dados Para Criaçãod de Endereço:**
+address: 'Avenida X',
+number: 123,
+complement: 'Proximo ao ponto Y',
+cep: '123456',
+city: 'Fortaleza',
+state: 'Ceara0,',
 
 ```
