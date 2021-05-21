@@ -45,7 +45,7 @@ POST /users/
 "email": "user@email.com",
 "password": "123456",
 "age": 40,
-"ethnicity": "black", (afro, caucasian, indigenous, other)
+"ethnicity": "afro", (afro, caucasian, indigenous, other)
 "phone": "9999999999",
 "weight": 90,
 
